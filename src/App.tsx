@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom'
+import { NavLink, HashRouter as Router, Route } from 'react-router-dom'
 import { Button } from 'bougie-design'
 import * as Pages from './pages'
 
