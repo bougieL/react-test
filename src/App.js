@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom'
+import { Button } from 'antd'
+import * as Pages from './pages'
 
-function App() {
+function Header() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <header>
+      <CustomLink to="/" exact>
+        Page One
+      </CustomLink>
+      <CustomLink to="/pagetwo">Page Two</CustomLink>
+      <CustomLink to="/pagethree">Page Three</CustomLink>
+    </header>
+  )
 }
 
-export default App;
+function CustomLink({
+  to,
+  children,
+  exact,
+  ...rest
+}) {
+  return (
+    <Route
+      path={to}
+      exact={exact}
+      children={({ match }) => (
+        <NavLink to={to} {...rest}>
+          <Button type={match ? 'primary' : 'default'}>{children}</Button>
+        </NavLink>
+      )}
+    />
+  )
+}
+
+const App = () => {
+  const routes = [
+    {
+      path: '/',
+      component: Pages.PageOne,
+      exact: true
+    },
+    {
+      path: '/pagetwo',
+      component: Pages.PageTwo
+    },
+    {
+      path: '/pagethree',
+      component: Pages.PageThree
+    }
+  ]
+  return (
+    <Router>
+      <Header />
+      {routes.map(({ exact, ...props }) => (
+        <Route {...props} exact={exact} />
+      ))}
+    </Router>
+  )
+}
+
+export default App
