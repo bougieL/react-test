@@ -3,12 +3,7 @@ import { inject, observer } from 'mobx-react'
 import { Input, Form as AntForm } from 'antd'
 
 const FormC = ({
-  store: {
-    username,
-    password,
-    updateUsername,
-    updatePassword
-  }
+  store: { username, password, updateUsername, updatePassword }
 }) => {
   console.log(username)
   return (

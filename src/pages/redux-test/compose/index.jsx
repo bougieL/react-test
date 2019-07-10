@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Compose = () => {
   return (
-      <>
-        <h1>Compose</h1>
-      </>
+    <>
+      <h1>Compose</h1>
+    </>
   )
 }

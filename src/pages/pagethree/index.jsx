@@ -15,7 +15,7 @@ export const PageThree = () => {
       name: 'Dynamic Object',
       path: '/dynamic-object',
       component: DynamicObject
-    },
+    }
   ]
   return <Scaffold config={config} />
 }

@@ -6,7 +6,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "format": "prettier --write **/* --ignore-path .gitignore"
+    "format": "prettier --write '**/*.{js,css,md,scss,jsx}' --ignore-path .gitignore"
   },
   "dependencies": {
     "@babel/core": "7.4.3",
