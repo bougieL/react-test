@@ -1,3 +1,3 @@
-export * from './pageone'
+export * from './mobx-test'
+export * from './redux-test'
 export * from './pagethree'
-export * from './pagetwo'

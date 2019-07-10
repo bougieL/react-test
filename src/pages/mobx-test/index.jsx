@@ -3,7 +3,7 @@ import { Scaffold } from '@/components'
 import { DeepWatch } from './deep-watch'
 import { DynamicObject } from './dynamic-object'
 
-export const PageThree = () => {
+export const MobxTest = () => {
   const config = [
     {
       name: 'Deep Watch',
