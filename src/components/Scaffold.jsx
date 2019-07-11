@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, BrowserRouter as Router, Route } from 'react-router-dom'
+import { NavLink, HashRouter as Router, Route } from 'react-router-dom'
 import { Button } from 'antd'
 
 function CustomLink({ to, children, exact, ...rest }) {
