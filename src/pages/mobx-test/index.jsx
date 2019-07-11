@@ -17,5 +17,5 @@ export const MobxTest = () => {
       component: DynamicObject
     }
   ]
-  return <Scaffold config={config} />
+  return <Scaffold prefix='/mobx-test' config={config} />
 }

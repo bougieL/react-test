@@ -1,32 +1,17 @@
 import { observable, computed, action } from 'mobx'
 
 export const store = new (class {
-  @observable data = [
-    {
-      data: {
-        data: [
-          {
-            username: '123',
-            password: '456'
-          }
-        ]
-      }
-    }
-  ]
-
-  @computed get username() {
-    return this.data[0].data.data[0].username
+  @observable maxKey = 0
+  @observable data = {
+    username: '123',
+    password: '456'
   }
 
-  @computed get password() {
-    return this.data[0].data.data[0].password
+  @action updateItem = (key, value) => {
+    this.data[key] = value
   }
 
-  @action updateUsername = (str) => {
-    this.data[0].data.data[0].username = str
-  }
-
-  @action updatePassword = (str) => {
-    this.data[0].data.data[0].password = str
+  @action addItem = () => {
+    this.data[`new ${++this.maxKey}`] = ''
   }
 })()

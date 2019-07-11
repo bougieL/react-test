@@ -6,7 +6,7 @@ const App = () => {
   const config = [
     {
       name: 'Mobx Test',
-      path: '/',
+      path: '/mobx-test',
       component: Pages.MobxTest,
       exact: true
     },
@@ -14,11 +14,6 @@ const App = () => {
       name: 'Redux Test',
       path: '/redux-test',
       component: Pages.ReduxTest
-    },
-    {
-      name: 'Page Three',
-      path: '/pagethree',
-      component: Pages.PageThree
     }
   ]
   return (
