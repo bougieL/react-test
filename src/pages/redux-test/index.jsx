@@ -1,20 +1,20 @@
 import React from 'react'
 import { Scaffold } from '@/components'
-import { Compose } from './compose'
-import { Connect } from './connect'
+import { Basic } from './basic'
+import { FullSet } from './full-set'
 
 export const ReduxTest = () => {
   const config = [
     {
-      name: 'Compose',
+      name: 'Basic',
       path: '/',
-      component: Compose,
+      component: Basic,
       exact: true
     },
     {
-      name: 'Connect',
-      path: '/connect',
-      component: Connect
+      name: 'Full Set',
+      path: '/full-set',
+      component: FullSet
     }
   ]
   return <Scaffold prefix="/redux-test" config={config} />

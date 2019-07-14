@@ -1,5 +1,6 @@
 import React from 'react'
 import { Provider } from 'mobx-react'
+import { Description } from '@/components'
 import * as stores from './store'
 import { Form } from './Form'
 
@@ -7,7 +8,9 @@ export function DynamicObject() {
   return (
     <Provider {...stores}>
       <>
-        <h1>Dynamic Object</h1>
+        <Description title="Dynamic Object">
+          Observe a object with dynamic key.
+        </Description>
         <Form />
       </>
     </Provider>

@@ -5,10 +5,15 @@ import * as Pages from './pages'
 const App = () => {
   const config = [
     {
+      name: 'Home',
+      path: '/',
+      component: Pages.Home,
+      exact: true
+    },
+    {
       name: 'Mobx Test',
       path: '/mobx-test',
-      component: Pages.MobxTest,
-      exact: true
+      component: Pages.MobxTest
     },
     {
       name: 'Redux Test',
