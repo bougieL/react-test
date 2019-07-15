@@ -14,7 +14,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run format",
-      "pre-push": "yarn depoly"
+      "pre-push": "npm run deploy"
     }
   },
   "dependencies": {
