@@ -9,7 +9,7 @@ function CustomLink({ to, children, exact, ...rest }) {
       exact={exact}
       children={({ match }) => (
         <NavLink to={to} {...rest}>
-          <Button type={match && 'primary'} style={{ marginRight: 8 }}>
+          <Button type={match && 'primary'} style={{ marginRight: 8, marginBottom: 8 }}>
             {children}
           </Button>
         </NavLink>
